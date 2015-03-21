@@ -32,10 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.tableView reloadData];
-    
-//    if (self.hasLaunched == NO) {
-        [self presentOnBoard];
-//    }
+    self.hasLaunched = [[NSUserDefaults standardUserDefaults] objectForKey:@"launchKey"];
     [self setupViews];
     
     self.view.backgroundColor= [UIColor whiteColor];
@@ -44,8 +41,17 @@
     [self registerTableView:self.tableView];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    if (self.hasLaunched == NO) {
+        self.hasLaunched = YES;
+        [self presentOnBoard];
+        
+        [[NSUserDefaults standardUserDefaults] setBool:self.hasLaunched forKey:@"launchKey"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 -(void)setupNotifications {

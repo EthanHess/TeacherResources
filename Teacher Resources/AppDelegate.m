@@ -15,9 +15,6 @@
 
 @interface AppDelegate ()
 
-//@property (nonatomic, strong) GroupViewController *groupViewController;
-@property (nonatomic, assign) BOOL hasLaunched;
-
 @end
 
 @implementation AppDelegate
@@ -25,22 +22,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.hasLaunched = NO; //[[NSUserDefaults standardUserDefaults] objectForKey:@"launchKey"];
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];    
     GroupViewController *groupViewController = [GroupViewController new];
-    UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:groupViewController];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:groupViewController];
     
     self.window.rootViewController = navController;
-    
-    [groupViewController updateWithHasLaunched:self.hasLaunched];
     [AppearanceController setupAppearance];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    
-    [[NSUserDefaults standardUserDefaults] setBool:self.hasLaunched forKey:@"launchKey"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
     
     return YES;
 }
