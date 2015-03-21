@@ -18,7 +18,7 @@
 @property (strong, nonatomic) UIView *addClassCustomView;
 @property (strong, nonatomic) UITextField *addTextField;
 @property (strong, nonatomic) UIButton *addClassButton;
-@property (nonatomic, strong) GroupViewController *groupViewController;
+@property (strong, nonatomic) GroupViewController *groupViewController;
 @property (assign, nonatomic) BOOL hasLaunched;
 
 @end
