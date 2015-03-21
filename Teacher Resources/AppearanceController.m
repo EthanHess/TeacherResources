@@ -35,4 +35,13 @@
 //<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
 
 //<div>Icons made by <a href="http://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a>             is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></div>
+
+//<a href="http://icons8.com/web-app/6254/Right2">Right2 icon credits</a>
+
+//<a href="http://icons8.com/web-app/6253/Left2">Free icons by Icons8</a>
+
+//<a href="http://icons8.com/web-app/7789/Right-Filled">Free icons by Icons8</a>
+
+
+
 @end

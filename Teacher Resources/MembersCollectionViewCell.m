@@ -11,8 +11,6 @@
 
 @implementation MembersCollectionViewCell
 
-@synthesize name;
-
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
@@ -32,18 +30,13 @@
     [self.layer setShadowOffset:CGSizeMake(1, 5)];
     [self.layer setShadowColor:[UIColor colorWithRed:0.1 green:0.1 blue:0.1 alpha:0.5].CGColor];
     
-    self.labelFrame = self.bounds;
-    name = [[UILabel alloc]initWithFrame:self.labelFrame];
-    [name setTextAlignment:NSTextAlignmentCenter];
-    [name setTextColor:[UIColor whiteColor]];
-    [name setFont:[UIFont fontWithName:@"Chalkboard" size:20]];
-    [self addSubview:name];
-}
-
--(void)updateLabelFrame:(CGRect)frame
-{
-    [name setFrame:frame];
-    [name setNeedsLayout];
+    UILabel *nameLabel = [[UILabel alloc]initWithFrame:self.bounds];
+    nameLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [nameLabel setTextAlignment:NSTextAlignmentCenter];
+    [nameLabel setTextColor:[UIColor whiteColor]];
+    [nameLabel setFont:[UIFont fontWithName:@"Chalkboard" size:20]];
+    [self addSubview:nameLabel];
+    self.nameLabel = nameLabel;
 }
 
 @end

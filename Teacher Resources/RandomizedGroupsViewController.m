@@ -97,12 +97,6 @@
     return itemSize;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView didEndDisplayingCell:(MembersCollectionViewCell *)cell forItemAtIndexPath:(NSIndexPath *)indexPath; {
-    
-    [cell updateLabelFrame:CGRectMake(0, 0, (screenWidth /numberOfPeopleInGroup) - 6 , ((screenHeight - 64) / 5) / 2)];
-    
-}
-
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     
     Member *currentMember = [GroupController sharedInstance].temporaryStudentList[indexPath.item];

@@ -39,8 +39,8 @@
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     Member *member = [GroupController sharedInstance].temporaryStudentList[indexPath.row];
-    cell.name.text = member.name;
-    cell.name.font = [UIFont fontWithName:@"Chalkduster" size:16];
+    cell.nameLabel.text = member.name;
+    cell.nameLabel.font = [UIFont fontWithName:@"Chalkduster" size:16];
     return cell;
 }
 

@@ -10,12 +10,7 @@
 
 @interface MembersCollectionViewCell : UICollectionViewCell
 
-@property (nonatomic,strong) UILabel *name;
-@property (nonatomic,assign) CGRect labelFrame;
-
-
--(void)setupViews;
--(void)updateLabelFrame:(CGRect)frame;
+@property (nonatomic,strong) UILabel *nameLabel;
 
 @end
 
